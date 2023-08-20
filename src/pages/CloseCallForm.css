@@ -1,0 +1,13 @@
+.risk-levels{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    list-style: none;
+    text-decoration: none;
+    gap:20px
+}
+li{
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: yellowgreen;
+  font-weight: 600;
+}

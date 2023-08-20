@@ -1,0 +1,54 @@
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import "./CloseCallForm.css"
+
+export function CloseCallForm() {
+  const navigate = useNavigate()
+  return (
+    <div className="form-container">
+      <form>
+        <h1>Select Project</h1>
+        <select>
+          <option>PROJECT01</option>
+          <option>PROJECT02</option>
+        </select>
+      </form>
+      <form>
+        <h1>Your Details</h1>
+        <label>Full Name</label>
+        <input></input>
+        <label>Company Name</label>
+        <input></input>
+        <label>Email</label>
+        <input></input>
+        <label>Phone Number</label>
+        <input></input>
+      </form>
+      <form>
+        <h1>Your Observation</h1>
+        <label>What did you see and what were the benefits?</label>
+        <textarea></textarea>
+        <label>What should be recognised</label>
+        <textarea></textarea>
+        <label>Location</label>
+        <input></input>
+        <h3>Risk Level</h3>
+        <ul className="risk-levels">
+          <li>LOW</li>
+          <li>MEDIUM</li>
+          <li>HIGH</li>
+        </ul>
+        <div>
+          <label>Date</label>
+          <input type="date"></input>
+          <label>Time</label>
+          <input type="time"></input>
+        </div>
+      </form>
+      <div className="form-buttons">
+        <button onClick={() => navigate("/")}>HOME</button>
+        <button>SUBMIT</button>
+      </div>
+    </div>
+  );
+}
