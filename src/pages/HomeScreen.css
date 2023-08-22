@@ -37,3 +37,8 @@ button {
   margin: 3px;
   padding: 2px;
 }
+@media screen and (max-width: 800px) {
+  .grid-container {
+    max-width: 100%;
+  }
+}

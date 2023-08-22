@@ -1,9 +1,9 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "./CloseCallForm.css"
+import "./CloseCallForm.css";
 
 export function CloseCallForm() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   return (
     <div className="form-container">
       <form>
@@ -38,11 +38,15 @@ export function CloseCallForm() {
           <li>MEDIUM</li>
           <li>HIGH</li>
         </ul>
-        <div>
-          <label>Date</label>
-          <input type="date"></input>
-          <label>Time</label>
-          <input type="time"></input>
+        <div className="form-data-time">
+          <div>
+            <label>Date</label>
+            <input type="date"></input>
+          </div>
+          <div>
+            <label>Time</label>
+            <input type="time"></input>
+          </div>
         </div>
       </form>
       <div className="form-buttons">

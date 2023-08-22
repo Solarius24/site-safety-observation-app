@@ -1,5 +1,5 @@
 .form-container {
-  background:green;
+  background: green;
   display: grid;
   grid-template-columns: 1;
   gap: 5px;
@@ -9,31 +9,51 @@
   border: 5px solid black;
   border-radius: 10px;
 }
-form{
-    display: grid;
-    grid-template-columns: 1;
-    margin: 5px;
-    background: lightgrey;
-    padding: 1rem;
+form {
+  display: grid;
+  grid-template-columns: 1;
+  margin: 5px;
+  background: lightgrey;
+  padding: 1rem;
 }
-label{
-    text-align: left;
+label {
+  text-align: left;
 }
-textarea{
-    min-height: 10rem;
+textarea {
+  min-height: 10rem;
 }
-textarea, input{
-    border-radius: 10px;
-    padding: 1rem;
-    margin: 5px;
+textarea,
+input {
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 5px;
 }
-.form-buttons{
-    background: lightgrey;
-    margin: 5px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.form-buttons {
+  background: lightgrey;
+  margin: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
-button:hover{
-    background-color: orangered;
-    color: white;
+button:hover {
+  background-color: orangered;
+  color: white;
+}
+
+.form-data-time {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.form-data-time > div {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.form-data-time label {
+  text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+  .form-container {
+    max-width: 100%;
+  }
 }
