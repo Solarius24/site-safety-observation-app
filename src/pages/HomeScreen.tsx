@@ -1,32 +1,24 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import "./HomeScreen.css";
-import { Button } from "../components/Button";
-import { Navigate, useNavigate } from "react-router-dom";
 import { Modal } from "../components/Modal";
 
 export function HomeScreen() {
-  const [showModal, setShowModal] = useState(false)
-  const [formType ,setFormType] = useState("")
-  const navigate = useNavigate();
+  const [showModal, setShowModal] = useState(false);
+  const [formType, setFormType] = useState("");
 
-  function goodPracticeHandler(){
-    setShowModal(true)
-    setFormType("good_practice")
-    // navigate("/good_practice")
-
+  function goodPracticeHandler() {
+    setShowModal(true);
+    setFormType("good_practice");
   }
 
-  function closeCallHandler(){
-  setShowModal(true)
-  setFormType("close_call")
-    // navigate("/close_call")
-
+  function closeCallHandler() {
+    setShowModal(true);
+    setFormType("close_call");
   }
 
   return (
-    
     <div className="grid-container">
-     {showModal && <Modal formType={formType} setShowModal = {setShowModal}/>}
+      {showModal && <Modal formType={formType} setShowModal={setShowModal} />}
       <header>
         <h4>BALFORT BEATY VINCI SYSTRA WORKING IN PARTNERSHIP WITH HS2</h4>
         <h4>SAFE AT HEART</h4>
@@ -40,10 +32,15 @@ export function HomeScreen() {
       </div>
 
       <div className="buttons">
-        <button style={{background:"lightgreen"}} onClick={goodPracticeHandler}>
+        <button
+          style={{ background: "lightgreen" }}
+          onClick={goodPracticeHandler}
+        >
           Good Practice
         </button>
-        <button style={{background:"red"}} onClick={closeCallHandler}>Close Call</button>
+        <button style={{ background: "red" }} onClick={closeCallHandler}>
+          Close Call
+        </button>
       </div>
       <footer>
         <p>Powered by BALTIC ENGINEERS LTD</p>
